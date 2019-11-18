@@ -34,9 +34,7 @@ public class CreditCard  implements Parcelable {
         } else {
             this.network = CreditCard.Network.UNKNOWN;
         }
-
     }
-
     @NonNull public String last4() {
         return this.number.substring(this.number.length() - 4);
     }
@@ -57,7 +55,6 @@ public class CreditCard  implements Parcelable {
 
         return month + "/" + year;
     }
-
     private CreditCard(Parcel in) {
         String number = in.readString();
         this.expiryMonth = in.readString();

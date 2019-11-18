@@ -3,7 +3,6 @@ package com.getbouncer.cardscan.base;
 import android.os.Build;
 import android.os.SystemClock;
 import android.text.TextUtils;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -30,7 +29,6 @@ class ScanStats {
     JSONObject toJson() {
         JSONObject object = new JSONObject();
         double duration = ((double) endTimeMs - startTimeMs) / 1000.0;
-
         try {
             object.put("success", this.success);
             object.put("scans", this.scans);
@@ -42,7 +40,6 @@ class ScanStats {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
         return object;
     }
 
